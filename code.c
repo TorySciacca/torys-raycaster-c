@@ -54,6 +54,20 @@ void drawMap2D()
  }
 }
 
+void drawRays3D()
+{
+ int r,mx,my,mp,dof; float rx,ry,ra,xo,yo;
+ ra=pa;
+ for(r=0;r<1;r++)
+ {
+ 	//----Check Horizontal Lines---
+ 	dof=0;
+ 	float aTan=-1/tan(ra);
+ 	if(ra>PI){ ry((int)py>>6)>>6)-0.0001; rx=(py-ry)*aTan+px; yo=-64; xo=-yo*aTan;} //looking up (dividing by 64 via bit shifting)
+ 	if(ra>PI){ ry((int)py>>6)>>6)+64    ; rx=(py-ry)*aTan+px; yo=-64; xo=-yo*aTan;} 
+ }
+}
+
 void display()
 {
  glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
